@@ -2,14 +2,14 @@
 //  JustEatDemoTests.swift
 //  JustEatDemoTests
 //
-//  Created by Alaeddine Houas on 29/3/2022.
+//  Created by Alaeddine Houas on 8/4/2022.
 //
 
 import XCTest
 @testable import JustEatDemo
 
 class JustEatDemoTests: XCTestCase {
-    
+
     class MockHomeInteractor: HomeInteractorProtocol{
         var presenter: HomePresenterProtocol?
         var localDatamanager: HomeLocalDataManagerProtocol?
@@ -71,5 +71,4 @@ class JustEatDemoTests: XCTestCase {
         XCTAssertEqual(presenter.item(at: 1).name, "restaurant#2")
         XCTAssertEqual(presenter.item(at: 2).name, "restaurant#1")
     }
-
 }
