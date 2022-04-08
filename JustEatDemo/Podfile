@@ -4,18 +4,18 @@
 target 'JustEatDemo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  
+
   # Pods for JustEatDemo
   pod 'MBProgressHUD'
-  
-  
+
+
   target 'JustEatDemoTests' do
     inherit! :search_paths
     # Pods for testing
   end
-  
+
   target 'JustEatDemoUITests' do
     # Pods for testing
   end
-  
+
 end
