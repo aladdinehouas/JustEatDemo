@@ -10,7 +10,7 @@ import UIKit
 extension UIColor {
     
     @nonobjc class var primaryOrangeColor: UIColor {
-        return  UIColor(red: 0.85, green: 0.52, blue: 0.21, alpha: 1.00)}
+        return  UIColor(red: 0.82, green: 0.45, blue: 0.23, alpha: 1.00)}
     
     @nonobjc class var primaryGreenColor: UIColor {
         return UIColor(red: 0.03, green: 0.52, blue: 0.21, alpha: 1.00)}
