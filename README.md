@@ -29,6 +29,7 @@ I focused on the structure and code style/readability.
 - the app retains the selected sort option when the app is killed
 
 > here you find some screenshots of the app in this [link](https://drive.google.com/file/d/1-AR1AkW-7cg1QlhG22V9MAAklvdDesLg/view?usp=sharing)
+
 > Note: `JustEat Demo Project design` is inspired by the JustEat app.
 
 
