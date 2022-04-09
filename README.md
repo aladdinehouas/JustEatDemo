@@ -28,7 +28,7 @@ I focused on the structure and code style/readability.
 - user can sort restaurants by many options such as alphabet, open state, rating average, distance, etc.
 - the app retains the selected sort option when the app is killed
 
-> here you find some screenshots of the app in this [link](https://drive.google.com/file/d/1-AR1AkW-7cg1QlhG22V9MAAklvdDesLg/view?usp=sharing)
+> here you find some screenshots of the app in this [link](https://drive.google.com/drive/folders/1r5_krg5p5k3jNqq1qvKDNH69MFU2fR_u?usp=sharing)
 
 > Note: `JustEat Demo Project design` is inspired by the JustEat app.
 

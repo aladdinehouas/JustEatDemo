@@ -17,6 +17,12 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBarView: UIView!
+    @IBOutlet weak var searchBarHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var sortButton: UIButton!
+    
+    private var lastContentOffset: CGFloat = 0
     
     // MARK: - LifeCycle -
     
@@ -27,6 +33,7 @@ class HomeViewController: UIViewController {
     }
     
     func setUpUIViews(){
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         setUpTableView()
         searchTextField.delegate = self
         searchTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
@@ -38,6 +45,16 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: String(describing: RestaurantTableViewCell.self), bundle: nil) ,forCellReuseIdentifier:  String(describing: RestaurantTableViewCell.self))
+    }
+    
+    func showSearchBar(_ shown: Bool){
+        searchBarHeightConstraint.constant = shown ? 70 : 0
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
+            self.searchTextField.alpha = shown ? 1 : 0
+            self.cancelButton.alpha = shown ? 1 : 0
+            self.sortButton.alpha = shown ? 1 : 0
+        }
     }
     
     // MARK: - Actions -
@@ -111,6 +128,20 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        self.lastContentOffset = scrollView.contentOffset.y
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if self.lastContentOffset < scrollView.contentOffset.y {
+            // did move up
+            showSearchBar(false)
+        } else if self.lastContentOffset > scrollView.contentOffset.y {
+            // did move down
+            showSearchBar(true)
+        }
     }
     
 }

@@ -18,11 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ukK-rU-BXW">
-                                <rect key="frame" x="0.0" y="114" width="414" height="748"/>
+                                <rect key="frame" x="0.0" y="170" width="414" height="692"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLH-oM-sjE">
-                                <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="70"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ghg-nS-OjM">
                                         <rect key="frame" x="20" y="15" width="348" height="40"/>
@@ -59,7 +59,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.84705882349999995" green="0.52156862749999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.81960784313725488" green="0.45490196078431372" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="ghg-nS-OjM" firstAttribute="leading" secondItem="sLH-oM-sjE" secondAttribute="leading" constant="20" id="140-iS-F5Z"/>
                                     <constraint firstAttribute="height" constant="70" id="Fto-fK-Ox7"/>
@@ -71,21 +71,46 @@
                                     <constraint firstAttribute="trailing" secondItem="Jaa-bL-Vex" secondAttribute="trailing" constant="16" id="wyc-y4-IdV"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SgI-M8-P7s">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="justEat-logo" translatesAutoresizingMaskIntoConstraints="NO" id="1kW-uP-6gh">
+                                        <rect key="frame" x="16" y="34" width="100" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="1kW-uP-6gh" secondAttribute="height" multiplier="2:1" id="2zf-Rh-ejT"/>
+                                            <constraint firstAttribute="width" constant="100" id="Z9W-xo-dNv"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="NUs-LC-oGy"/>
+                                    <constraint firstAttribute="bottom" secondItem="1kW-uP-6gh" secondAttribute="bottom" constant="16" id="QL9-97-zag"/>
+                                    <constraint firstItem="1kW-uP-6gh" firstAttribute="leading" secondItem="SgI-M8-P7s" secondAttribute="leading" constant="16" id="TSK-eF-c7o"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ukK-rU-BXW" secondAttribute="trailing" id="0YL-cB-dPq"/>
-                            <constraint firstItem="sLH-oM-sjE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8Ae-U1-0pO"/>
+                            <constraint firstItem="sLH-oM-sjE" firstAttribute="top" secondItem="SgI-M8-P7s" secondAttribute="bottom" id="3kr-6C-Ycf"/>
+                            <constraint firstItem="SgI-M8-P7s" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4XR-M7-InV"/>
+                            <constraint firstItem="SgI-M8-P7s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XTH-n2-hIG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ukK-rU-BXW" secondAttribute="bottom" id="Y4l-6n-qw5"/>
                             <constraint firstItem="ukK-rU-BXW" firstAttribute="top" secondItem="sLH-oM-sjE" secondAttribute="bottom" id="a4t-ZG-Ns2"/>
                             <constraint firstItem="sLH-oM-sjE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cu0-FM-tJj"/>
                             <constraint firstItem="ukK-rU-BXW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ggP-Yl-npd"/>
+                            <constraint firstItem="SgI-M8-P7s" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="q5c-B8-wwR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sLH-oM-sjE" secondAttribute="trailing" id="tWX-4Z-va0"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="XX2-P2-DvA" id="s7I-Lp-O0G"/>
+                        <outlet property="searchBarHeightConstraint" destination="Fto-fK-Ox7" id="nt1-IW-nlv"/>
+                        <outlet property="searchBarView" destination="sLH-oM-sjE" id="ROG-B4-wJH"/>
                         <outlet property="searchTextField" destination="ghg-nS-OjM" id="dYt-2Q-Tjs"/>
+                        <outlet property="sortButton" destination="Jaa-bL-Vex" id="6EV-zx-dcp"/>
                         <outlet property="tableView" destination="ukK-rU-BXW" id="Kr5-Sp-izP"/>
                     </connections>
                 </viewController>
@@ -158,6 +183,7 @@
     </scenes>
     <resources>
         <image name="cancel" width="256" height="256"/>
+        <image name="justEat-logo" width="1920" height="1080"/>
         <image name="sort" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
