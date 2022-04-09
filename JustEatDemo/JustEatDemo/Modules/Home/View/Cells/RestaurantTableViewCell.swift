@@ -50,7 +50,7 @@ class RestaurantTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        containerView.roundCorners(.allCorners, radius: 10)
+        containerView.dropShadow()
         logoImage.roundCorners(.allCorners, radius: 50)
     }
     
