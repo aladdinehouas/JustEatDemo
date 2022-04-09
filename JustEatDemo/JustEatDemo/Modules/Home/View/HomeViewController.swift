@@ -33,7 +33,7 @@ class HomeViewController: UIViewController {
     }
     
     func setUpTableView() {
-        view.backgroundColor = .white.withAlphaComponent(0.9)
+        view.backgroundColor = .white
         tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
